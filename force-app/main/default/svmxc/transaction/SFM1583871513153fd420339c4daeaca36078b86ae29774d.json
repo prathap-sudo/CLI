@@ -1,0 +1,83 @@
+{
+  "validationRules": [],
+  "transactionType": "STANDALONE EDIT",
+  "tagKeys": "SFA_-_REJECT_WORK_ORDER;SFM1583871513153FD420339C4DAEACA36078B86AE29774D_DESC;WORK_ORDER;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "valueMappingName": "AcceptWorkOrder",
+      "valueMappingDeveloperName": "AcceptWorkOrder",
+      "type": "TARGET",
+      "referenceId": "a0Gf6000000Ev0YEAS",
+      "objectLabel": "Work Order",
+      "objectAPIName": "SVMXC__Service_Order__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003pqzAAA",
+          "name": "Work Order",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "PICKLIST",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Dispatch_Response__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 1
+        }
+      ],
+      "objectAPIName": "SVMXC__Service_Order__c"
+    },
+    "objectAPIName": "SVMXC__Service_Order__c",
+    "name": "DEMO - Accept/Reject Work",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": false,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/Summer15/en_us/svmx_redirector.htm?uid=SFM|HowToUseSFMDelivery",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "SFA - Reject Work Order",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "SFM1583871513153fd420339c4daeaca36078b86ae29774d",
+  "description": "Dispatch Response to Accept Assignment",
+  "childProcessNodes": [],
+  "attachmentEnabled": false
+}

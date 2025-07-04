@@ -1,0 +1,105 @@
+{
+  "validationRules": [],
+  "transactionType": "STANDALONE EDIT",
+  "tagKeys": "THINGWORX_-_UPDATE_WORK_ORDER;INFORMATION;THESE_VALUES_WILL_BE_STAMPED_ONTO_THE_WORK_ORDER;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "TARGET",
+      "referenceId": "a0Gf6000000EtyqEAC",
+      "objectLabel": "Work Order",
+      "objectAPIName": "SVMXC__Service_Order__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qxHAAQ",
+          "name": "Information",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "STRING",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupContextSource": "CURRENT_RECORD",
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Name",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Section",
+          "sequence": 2,
+          "referenceId": "a0cf60000003qxJAAQ",
+          "name": "These values will be stamped onto the Work Order",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "TEXTAREA",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupContextSource": "CURRENT_RECORD",
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "ThingWorx_Data__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 1
+        }
+      ],
+      "objectAPIName": "SVMXC__Service_Order__c"
+    },
+    "objectAPIName": "SVMXC__Service_Order__c",
+    "name": "ThingWorx - Update Work Order",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": false,
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "ThingWorx - Update Work Order",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "SFM1695219023551ef3a3528f8eba00d1e7ef3e71aa3fbd0",
+  "childProcessNodes": [],
+  "attachmentEnabled": false
+}

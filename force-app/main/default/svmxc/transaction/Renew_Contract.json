@@ -1,0 +1,165 @@
+{
+  "validationRules": [],
+  "transactionType": "SOURCE TO TARGET ALL",
+  "tagKeys": "DEMO_-_RENEW_SERVICE_CONTRACT;THIS_RECORD_DOES_NOT_MEET_THE_QUALIFICATION_CRITERIA_FOR_THIS_SFM_TRANSACTION;SERVICE_CONTRACT_DETAILS;RENEWAL_INFORMATION;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "SOURCE",
+      "referenceId": "a0Gf6000000Euy7EAC",
+      "objectAPIName": "SVMXC__Service_Contract__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "type": "TARGET",
+      "sourceAPIName": "SVMXC__Service_Contract__c",
+      "referenceId": "a0Gf6000000Euy8EAC",
+      "qualificationCriteriaId": "EXPR031",
+      "objectLabel": "Service Contract",
+      "objectAPIName": "SVMXC__Service_Contract__c",
+      "mappingId": "SCON_MAP_SC_Custom",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qcqAAA",
+          "name": "Service Contract Details",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "STRING",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Name",
+              "allowNew": false
+            }
+          ],
+          "columns": 1
+        },
+        {
+          "type": "Section",
+          "sequence": 2,
+          "referenceId": "a0cf60000003qcrAAA",
+          "name": "Renewal Information",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "DATE",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Start_Date__c",
+              "allowNew": false
+            },
+            {
+              "type": "DATE",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__End_Date__c",
+              "allowNew": false
+            },
+            {
+              "type": "TEXTAREA",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Renewal_Notes__c",
+              "allowNew": false
+            },
+            {
+              "type": "STRING",
+              "sequence": 4,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "P_O_Number__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        }
+      ],
+      "objectAPIName": "SVMXC__Service_Contract__c"
+    },
+    "objectAPIName": "SVMXC__Service_Contract__c",
+    "name": "DEMO - Service Contract Renewal Layout",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": true,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/Winter16/en_us/svmx_redirector.htm?uid=SFM|HowToUseSFMDelivery",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "DEMO - Renew Service Contract",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "Renew_Contract",
+  "childProcessNodes": [],
+  "attachmentEnabled": false
+}

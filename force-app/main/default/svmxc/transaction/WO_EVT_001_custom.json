@@ -1,0 +1,177 @@
+{
+  "validationRules": [
+    {
+      "sequence": 1,
+      "referenceId": "a0Gf6000000EurMEAS",
+      "name": "SVMXSTD: EVT_BizRule002",
+      "message": "Start Date/Time must be before End Date/Time.",
+      "developerName": "EXPR_BizRule002"
+    }
+  ],
+  "transactionType": "SOURCE TO TARGET ALL",
+  "tagKeys": "SELF_DISPATCH;WO_EVT_001_CUSTOM_DESC;MANAGEEVENT_PAGEHELP;EVENT_TIMES;DESCRIPTION;START_DATE/TIME_MUST_BE_BEFORE_END_DATE/TIME.;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "SOURCE",
+      "referenceId": "a0Gf6000000EurLEAS",
+      "objectAPIName": "SVMXC__Service_Order__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "type": "TARGET",
+      "sourceAPIName": "SVMXC__Service_Order__c",
+      "referenceId": "a0Gf6000000EurMEAS",
+      "objectLabel": "Event",
+      "objectAPIName": "Event",
+      "mappingId": "MAP_WO_EVT_demo",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": false,
+    "showAccountHistory": false,
+    "pageHelp": "This SFM transaction is used to create a new Event from Work Order",
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qSjAAI",
+          "name": "Event Times",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "REFERENCE",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "referenceToNameField": "SVMXC__Service_Order__c.Name",
+              "referenceTo": "SVMXC__Service_Order__c",
+              "referenceNameField": "Name",
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Work_Order__c",
+              "allowNew": false
+            },
+            {
+              "type": "DATETIME",
+              "sequence": 2,
+              "row": 1,
+              "required": true,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "StartDateTime",
+              "allowNew": false
+            },
+            {
+              "type": "STRING",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Subject",
+              "allowNew": false
+            },
+            {
+              "type": "DATETIME",
+              "sequence": 4,
+              "row": 2,
+              "required": true,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "EndDateTime",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Section",
+          "sequence": 2,
+          "referenceId": "a0cf60000003qSkAAI",
+          "name": "Description",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "TEXTAREA",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Description",
+              "allowNew": false
+            }
+          ],
+          "columns": 1
+        }
+      ],
+      "objectAPIName": "Event"
+    },
+    "objectAPIName": "Event",
+    "name": "DEMO - View Event",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": true,
+    "hideQuickSave": true,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/Spring15/en_us/svmx_redirector.htm?uid=SFM01_16",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "Self Dispatch",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "WO_EVT_001_custom",
+  "description": "This custom SFM transaction is used to create new Salesforce Event record from Work Order.",
+  "childProcessNodes": [],
+  "attachmentEnabled": false
+}

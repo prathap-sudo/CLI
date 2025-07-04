@@ -1,0 +1,281 @@
+{
+  "validationRules": [],
+  "transactionType": "STANDALONE CREATE",
+  "tagKeys": "DEMO_-_CREATE_LOCATION_(MOBILE);PAG028_PAGEHELP;LOCATION_DETAILS;ADDRESS_INFORMATION;PAG17334354942390610DC27F33DDF4DD73D707CBF508057_PAGEHELP;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "TARGET",
+      "referenceId": "a0Gf6000000EuUsEAK",
+      "objectLabel": "Location",
+      "objectAPIName": "SVMXC__Site__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHelp": "If opened in View mode, this page shows details of a Location record in read-only mode. If opened in Create mode from an existing Account record, you can create a new Location for the account.",
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003quTAAQ",
+          "name": "Location Details",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "STRING",
+              "sequence": 1,
+              "row": 1,
+              "required": true,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Name",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 2,
+              "row": 1,
+              "required": true,
+              "referenceToNameField": "Account.Name",
+              "referenceTo": "Account",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {
+                "name": "SVMXSTD: Account Lookup",
+                "isStandard": true,
+                "description": "Pre-configured standard lookup for Account object",
+                "lookupObject": "Account",
+                "lookupFilter": {
+                  "sourceObject": "Account",
+                  "expressionsList": [
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Phone",
+                      "sequence": 2,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Phone",
+                      "sequence": 2,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "AccountNumber",
+                      "sequence": 2,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Phone",
+                      "sequence": 3,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": false
+                },
+                "lkpRecords": 10,
+                "isDefault": true,
+                "defaultColumn": "Name",
+                "advancedFilters": []
+              },
+              "lookupConfigName": "SVMXSTD: Account Lookup",
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Account__c",
+              "allowNew": false
+            },
+            {
+              "type": "PHONE",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Site_Phone__c",
+              "allowNew": false
+            },
+            {
+              "type": "EMAIL",
+              "sequence": 4,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Email__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Section",
+          "sequence": 2,
+          "referenceId": "a0cf60000003quUAAQ",
+          "name": "Address Information",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "TEXTAREA",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Street__c",
+              "allowNew": false
+            },
+            {
+              "type": "STRING",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Zip__c",
+              "allowNew": false
+            },
+            {
+              "type": "STRING",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__City__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 4,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Country__c",
+              "allowNew": false
+            },
+            {
+              "type": "STRING",
+              "sequence": 5,
+              "row": 3,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__State__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        }
+      ],
+      "objectAPIName": "SVMXC__Site__c"
+    },
+    "objectAPIName": "SVMXC__Site__c",
+    "name": "DEMO - Create Location (Mobile)",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": false,
+    "helpUrl": "https://help.servicemax.com/articles/servicemax-20-2-consolidated-help/how-to-use-sfm-delivery",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "DEMO - Create Location (Mobile)",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "SFM1733435471500baff7d1f399af3236e01286322e13597",
+  "childProcessNodes": [],
+  "attachmentEnabled": false
+}

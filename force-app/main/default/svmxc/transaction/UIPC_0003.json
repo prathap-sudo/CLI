@@ -1,0 +1,1696 @@
+{
+  "validationRules": [],
+  "transactionType": "SOURCE TO TARGET CHILD",
+  "tagKeys": "UPDATE_INSTALLED_PRODUCT_CONFIGURATION;UIPC_0003_DESC;ASSEMBLIES;SUB-ASSEMBLIES;COMPONENTS;PARENT_INSTALLED_PRODUCT;INSTALLATION_NOTES;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "SOURCE",
+      "referenceId": "a0Gf6000000EupUEAS",
+      "objectAPIName": "SVMXC__Installed_Product__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "type": "TARGET",
+      "sourceAPIName": "SVMXC__Installed_Product__c",
+      "referenceId": "a0Gf6000000EupYEAS",
+      "objectLabel": "Installed Product",
+      "objectAPIName": "SVMXC__Installed_Product__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qNDAAY",
+          "name": "Parent Installed Product",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "STRING",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Product_Name__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Status__c",
+              "allowNew": false
+            },
+            {
+              "type": "STRING",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Product_Code__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 4,
+              "row": 2,
+              "required": false,
+              "referenceTo": "SVMXC__Installed_Product__c",
+              "referenceNameField": "Name",
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupMatchingField": "Name",
+              "lookupConfiguration": {
+                "name": "SVMXSTD: IB Lookup",
+                "isStandard": true,
+                "description": "Pre-configured standard lookup for Installed Product object",
+                "lookupObject": "SVMXC__Installed_Product__c",
+                "lookupFilter": {
+                  "sourceObject": "SVMXC__Installed_Product__c",
+                  "expressionsList": [
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Product__c",
+                      "sequence": 1,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Product__c",
+                      "sequence": 2,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Product__c",
+                      "sequence": 2,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 2,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 3,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 3,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Company__c",
+                      "sequence": 3,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 4,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": false
+                },
+                "lkpRecords": 10,
+                "isDefault": true,
+                "defaultColumn": "Name",
+                "advancedFilters": []
+              },
+              "lookupConfigName": "SVMXSTD: IB Lookup",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Top_Level__c",
+              "allowNew": false
+            },
+            {
+              "type": "STRING",
+              "sequence": 5,
+              "row": 3,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Serial_Lot_Number__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 6,
+              "row": 3,
+              "required": false,
+              "referenceTo": "SVMXC__Installed_Product__c",
+              "referenceNameField": "Name",
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupMatchingField": "Name",
+              "lookupConfiguration": {
+                "name": "SVMXSTD: IB Lookup",
+                "isStandard": true,
+                "description": "Pre-configured standard lookup for Installed Product object",
+                "lookupObject": "SVMXC__Installed_Product__c",
+                "lookupFilter": {
+                  "sourceObject": "SVMXC__Installed_Product__c",
+                  "expressionsList": [
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Product__c",
+                      "sequence": 1,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Product__c",
+                      "sequence": 2,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Product__c",
+                      "sequence": 2,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 2,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 3,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 3,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Company__c",
+                      "sequence": 3,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 4,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": false
+                },
+                "lkpRecords": 10,
+                "isDefault": true,
+                "defaultColumn": "Name",
+                "advancedFilters": []
+              },
+              "lookupConfigName": "SVMXSTD: IB Lookup",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Parent__c",
+              "allowNew": false
+            },
+            {
+              "type": "STRING",
+              "sequence": 7,
+              "row": 4,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Asset_Tag__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 8,
+              "row": 4,
+              "required": false,
+              "referenceTo": "SVMXC__Site__c",
+              "referenceNameField": "Name",
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupMatchingField": "Name",
+              "lookupConfiguration": {
+                "name": "SVMXSTD: Location Lookup",
+                "isStandard": true,
+                "description": "Pre-configured standard lookup for Location object",
+                "lookupObject": "SVMXC__Site__c",
+                "lookupFilter": {
+                  "sourceObject": "SVMXC__Site__c",
+                  "expressionsList": [
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__City__c",
+                      "sequence": 1,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__City__c",
+                      "sequence": 2,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__Country__c",
+                      "sequence": 2,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__City__c",
+                      "sequence": 2,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 3,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__Country__c",
+                      "sequence": 3,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__Country__c",
+                      "sequence": 3,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": false
+                },
+                "lkpRecords": 10,
+                "isDefault": true,
+                "defaultColumn": "Name",
+                "advancedFilters": []
+              },
+              "lookupConfigName": "SVMXSTD: Location Lookup",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Site__c",
+              "allowNew": false
+            },
+            {
+              "type": "BOOLEAN",
+              "sequence": 10,
+              "row": 5,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "Loaner__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Section",
+          "sequence": 2,
+          "referenceId": "a0cf60000003qNEAAY",
+          "name": "Installation Notes",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "TEXTAREA",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Installation_Notes__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 1
+        },
+        {
+          "type": "Detail",
+          "sequence": 1,
+          "referenceId": "a0df6000000D5q9AAC",
+          "objectAlias": "Assemblies",
+          "name": "Assemblies",
+          "childAPIName": "SVMXC__Installed_Product__c",
+          "allowZeroLines": "Allow"
+        },
+        {
+          "type": "Detail",
+          "sequence": 2,
+          "referenceId": "a0df6000000D5qAAAS",
+          "objectAlias": "Sub-Assemblies",
+          "name": "Sub-Assemblies",
+          "childAPIName": "SVMXC__Installed_Product__c",
+          "allowZeroLines": "Allow"
+        },
+        {
+          "type": "Detail",
+          "sequence": 3,
+          "referenceId": "a0df6000000D5qBAAS",
+          "objectAlias": "FRUs",
+          "name": "Components",
+          "childAPIName": "SVMXC__Installed_Product__c",
+          "allowZeroLines": "Allow"
+        }
+      ],
+      "objectAPIName": "SVMXC__Installed_Product__c"
+    },
+    "objectAPIName": "SVMXC__Installed_Product__c",
+    "name": "UIPC_0002",
+    "lines": [
+      {
+        "sequence": 1,
+        "referenceId": "a0df6000000D5q9AAC",
+        "objectAlias": "Assemblies",
+        "name": "Assemblies",
+        "hideEmptySection": false,
+        "events": [],
+        "elements": [
+          {
+            "type": "REFERENCE",
+            "sequence": 1,
+            "row": 0,
+            "required": false,
+            "referenceTo": "SVMXC__Installed_Product__c",
+            "referenceNameField": "Name",
+            "readOnly": true,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {
+              "name": "SVMXSTD: IB Lookup",
+              "isStandard": true,
+              "description": "Pre-configured standard lookup for Installed Product object",
+              "lookupObject": "SVMXC__Installed_Product__c",
+              "lookupFilter": {
+                "sourceObject": "SVMXC__Installed_Product__c",
+                "expressionsList": [
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 1,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 2,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 3,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 3,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Company__c",
+                    "sequence": 3,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 4,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  }
+                ],
+                "defaultOn": false,
+                "allowOverride": false
+              },
+              "lkpRecords": 10,
+              "isDefault": true,
+              "defaultColumn": "Name",
+              "advancedFilters": []
+            },
+            "lookupConfigName": "SVMXSTD: IB Lookup",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 1,
+            "apiName": "SVMXC__Top_Level__c",
+            "allowNew": false
+          },
+          {
+            "type": "REFERENCE",
+            "sequence": 2,
+            "row": 0,
+            "required": false,
+            "referenceTo": "SVMXC__Installed_Product__c",
+            "referenceNameField": "Name",
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {
+              "name": "SVMXSTD: IB Lookup",
+              "isStandard": true,
+              "description": "Pre-configured standard lookup for Installed Product object",
+              "lookupObject": "SVMXC__Installed_Product__c",
+              "lookupFilter": {
+                "sourceObject": "SVMXC__Installed_Product__c",
+                "expressionsList": [
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 1,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 2,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 3,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 3,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Company__c",
+                    "sequence": 3,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 4,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  }
+                ],
+                "defaultOn": false,
+                "allowOverride": false
+              },
+              "lkpRecords": 10,
+              "isDefault": true,
+              "defaultColumn": "Name",
+              "advancedFilters": []
+            },
+            "lookupConfigName": "SVMXSTD: IB Lookup",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 2,
+            "apiName": "SVMXC__Parent__c",
+            "allowNew": false
+          },
+          {
+            "type": "REFERENCE",
+            "sequence": 3,
+            "row": 0,
+            "required": false,
+            "referenceTo": "Product2",
+            "referenceNameField": "Name",
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {
+              "name": "SVMXSTD: Product Lookup",
+              "isStandard": true,
+              "description": "Pre-configured standard lookup for Product object",
+              "lookupObject": "Product2",
+              "lookupFilter": {
+                "sourceObject": "Product2",
+                "expressionsList": [
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  }
+                ],
+                "defaultOn": false,
+                "allowOverride": false
+              },
+              "lkpRecords": 10,
+              "isDefault": true,
+              "defaultColumn": "Name",
+              "advancedFilters": [
+                {
+                  "name": "SVMXSTD:Limit Items to My Trunk Stock",
+                  "description": "Limit Items to My Trunk Stock",
+                  "targetNode": "SVMXC__Product__c",
+                  "sourceObject": "SVMXC__Product_Stock__c",
+                  "expressionsList": [
+                    {
+                      "value": "Available",
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 1,
+                      "parameterType": "Value",
+                      "operator": "eq",
+                      "operand": "Available",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "0",
+                      "sourceField": "SVMXC__Available_Qty__c",
+                      "sequence": 2,
+                      "parameterType": "Value",
+                      "operator": "gt",
+                      "operand": "0",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "User Trunk",
+                      "sourceField": "SVMXC__Location__c",
+                      "sequence": 3,
+                      "parameterType": "Constant",
+                      "operator": "eq",
+                      "operand": "User Trunk",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": true
+                }
+              ]
+            },
+            "lookupConfigName": "SVMXSTD: Product Lookup",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 3,
+            "apiName": "SVMXC__Product__c",
+            "allowNew": false
+          },
+          {
+            "type": "STRING",
+            "sequence": 4,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 4,
+            "apiName": "SVMXC__Serial_Lot_Number__c",
+            "allowNew": false
+          },
+          {
+            "type": "PICKLIST",
+            "sequence": 5,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 5,
+            "apiName": "Manufacturer__c",
+            "allowNew": false
+          }
+        ],
+        "childAPIName": "SVMXC__Installed_Product__c",
+        "allowZeroLines": "Allow",
+        "allowNew": true,
+        "allowDelete": true,
+        "allowClone": true
+      },
+      {
+        "sequence": 2,
+        "referenceId": "a0df6000000D5qAAAS",
+        "objectAlias": "Sub-Assemblies",
+        "name": "Sub-Assemblies",
+        "hideEmptySection": false,
+        "events": [],
+        "elements": [
+          {
+            "type": "REFERENCE",
+            "sequence": 1,
+            "row": 0,
+            "required": false,
+            "referenceTo": "SVMXC__Installed_Product__c",
+            "referenceNameField": "Name",
+            "readOnly": true,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {
+              "name": "SVMXSTD: IB Lookup",
+              "isStandard": true,
+              "description": "Pre-configured standard lookup for Installed Product object",
+              "lookupObject": "SVMXC__Installed_Product__c",
+              "lookupFilter": {
+                "sourceObject": "SVMXC__Installed_Product__c",
+                "expressionsList": [
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 1,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 2,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 3,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 3,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Company__c",
+                    "sequence": 3,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 4,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  }
+                ],
+                "defaultOn": false,
+                "allowOverride": false
+              },
+              "lkpRecords": 10,
+              "isDefault": true,
+              "defaultColumn": "Name",
+              "advancedFilters": []
+            },
+            "lookupConfigName": "SVMXSTD: IB Lookup",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 1,
+            "apiName": "SVMXC__Top_Level__c",
+            "allowNew": false
+          },
+          {
+            "type": "REFERENCE",
+            "sequence": 3,
+            "row": 0,
+            "required": false,
+            "referenceTo": "Product2",
+            "referenceNameField": "Name",
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {
+              "name": "SVMXSTD: Product Lookup",
+              "isStandard": true,
+              "description": "Pre-configured standard lookup for Product object",
+              "lookupObject": "Product2",
+              "lookupFilter": {
+                "sourceObject": "Product2",
+                "expressionsList": [
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  }
+                ],
+                "defaultOn": false,
+                "allowOverride": false
+              },
+              "lkpRecords": 10,
+              "isDefault": true,
+              "defaultColumn": "Name",
+              "advancedFilters": [
+                {
+                  "name": "SVMXSTD:Limit Items to My Trunk Stock",
+                  "description": "Limit Items to My Trunk Stock",
+                  "targetNode": "SVMXC__Product__c",
+                  "sourceObject": "SVMXC__Product_Stock__c",
+                  "expressionsList": [
+                    {
+                      "value": "Available",
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 1,
+                      "parameterType": "Value",
+                      "operator": "eq",
+                      "operand": "Available",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "0",
+                      "sourceField": "SVMXC__Available_Qty__c",
+                      "sequence": 2,
+                      "parameterType": "Value",
+                      "operator": "gt",
+                      "operand": "0",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "User Trunk",
+                      "sourceField": "SVMXC__Location__c",
+                      "sequence": 3,
+                      "parameterType": "Constant",
+                      "operator": "eq",
+                      "operand": "User Trunk",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": true
+                }
+              ]
+            },
+            "lookupConfigName": "SVMXSTD: Product Lookup",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 3,
+            "apiName": "SVMXC__Product__c",
+            "allowNew": false
+          },
+          {
+            "type": "REFERENCE",
+            "sequence": 2,
+            "row": 0,
+            "required": false,
+            "referenceTo": "SVMXC__Installed_Product__c",
+            "referenceNameField": "Name",
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {
+              "name": "SVMXSTD: IB Lookup",
+              "isStandard": true,
+              "description": "Pre-configured standard lookup for Installed Product object",
+              "lookupObject": "SVMXC__Installed_Product__c",
+              "lookupFilter": {
+                "sourceObject": "SVMXC__Installed_Product__c",
+                "expressionsList": [
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 1,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 2,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 3,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 3,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Company__c",
+                    "sequence": 3,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 4,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  }
+                ],
+                "defaultOn": false,
+                "allowOverride": false
+              },
+              "lkpRecords": 10,
+              "isDefault": true,
+              "defaultColumn": "Name",
+              "advancedFilters": []
+            },
+            "lookupConfigName": "SVMXSTD: IB Lookup",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 2,
+            "apiName": "SVMXC__Parent__c",
+            "allowNew": false
+          },
+          {
+            "type": "STRING",
+            "sequence": 4,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 4,
+            "apiName": "SVMXC__Serial_Lot_Number__c",
+            "allowNew": false
+          },
+          {
+            "type": "PICKLIST",
+            "sequence": 5,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 5,
+            "apiName": "Manufacturer__c",
+            "allowNew": false
+          }
+        ],
+        "childAPIName": "SVMXC__Installed_Product__c",
+        "allowZeroLines": "Allow",
+        "allowNew": true,
+        "allowDelete": true,
+        "allowClone": true
+      },
+      {
+        "sequence": 3,
+        "referenceId": "a0df6000000D5qBAAS",
+        "objectAlias": "FRUs",
+        "name": "Components",
+        "hideEmptySection": false,
+        "events": [],
+        "elements": [
+          {
+            "type": "REFERENCE",
+            "sequence": 2,
+            "row": 0,
+            "required": false,
+            "referenceTo": "SVMXC__Installed_Product__c",
+            "referenceNameField": "Name",
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {
+              "name": "SVMXSTD: IB Lookup",
+              "isStandard": true,
+              "description": "Pre-configured standard lookup for Installed Product object",
+              "lookupObject": "SVMXC__Installed_Product__c",
+              "lookupFilter": {
+                "sourceObject": "SVMXC__Installed_Product__c",
+                "expressionsList": [
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 1,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 2,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 3,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 3,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Company__c",
+                    "sequence": 3,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 4,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  }
+                ],
+                "defaultOn": false,
+                "allowOverride": false
+              },
+              "lkpRecords": 10,
+              "isDefault": true,
+              "defaultColumn": "Name",
+              "advancedFilters": []
+            },
+            "lookupConfigName": "SVMXSTD: IB Lookup",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 2,
+            "apiName": "SVMXC__Parent__c",
+            "allowNew": false
+          },
+          {
+            "type": "REFERENCE",
+            "sequence": 1,
+            "row": 0,
+            "required": false,
+            "referenceTo": "SVMXC__Installed_Product__c",
+            "referenceNameField": "Name",
+            "readOnly": true,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {
+              "name": "SVMXSTD: IB Lookup",
+              "isStandard": true,
+              "description": "Pre-configured standard lookup for Installed Product object",
+              "lookupObject": "SVMXC__Installed_Product__c",
+              "lookupFilter": {
+                "sourceObject": "SVMXC__Installed_Product__c",
+                "expressionsList": [
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 1,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Product__c",
+                    "sequence": 2,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 2,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 3,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 3,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceFldDtaType": "REFERENCE",
+                    "sourceField": "SVMXC__Company__c",
+                    "sequence": 3,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "SVMXC__Status__c",
+                    "sequence": 4,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  }
+                ],
+                "defaultOn": false,
+                "allowOverride": false
+              },
+              "lkpRecords": 10,
+              "isDefault": true,
+              "defaultColumn": "Name",
+              "advancedFilters": []
+            },
+            "lookupConfigName": "SVMXSTD: IB Lookup",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 1,
+            "apiName": "SVMXC__Top_Level__c",
+            "allowNew": false
+          },
+          {
+            "type": "REFERENCE",
+            "sequence": 3,
+            "row": 0,
+            "required": false,
+            "referenceTo": "Product2",
+            "referenceNameField": "Name",
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {
+              "name": "SVMXSTD: Product Lookup",
+              "isStandard": true,
+              "description": "Pre-configured standard lookup for Product object",
+              "lookupObject": "Product2",
+              "lookupFilter": {
+                "sourceObject": "Product2",
+                "expressionsList": [
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  }
+                ],
+                "defaultOn": false,
+                "allowOverride": false
+              },
+              "lkpRecords": 10,
+              "isDefault": true,
+              "defaultColumn": "Name",
+              "advancedFilters": [
+                {
+                  "name": "SVMXSTD:Limit Items to My Trunk Stock",
+                  "description": "Limit Items to My Trunk Stock",
+                  "targetNode": "SVMXC__Product__c",
+                  "sourceObject": "SVMXC__Product_Stock__c",
+                  "expressionsList": [
+                    {
+                      "value": "Available",
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 1,
+                      "parameterType": "Value",
+                      "operator": "eq",
+                      "operand": "Available",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "0",
+                      "sourceField": "SVMXC__Available_Qty__c",
+                      "sequence": 2,
+                      "parameterType": "Value",
+                      "operator": "gt",
+                      "operand": "0",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "User Trunk",
+                      "sourceField": "SVMXC__Location__c",
+                      "sequence": 3,
+                      "parameterType": "Constant",
+                      "operator": "eq",
+                      "operand": "User Trunk",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": true
+                }
+              ]
+            },
+            "lookupConfigName": "SVMXSTD: Product Lookup",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 3,
+            "apiName": "SVMXC__Product__c",
+            "allowNew": false
+          },
+          {
+            "type": "STRING",
+            "sequence": 4,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 4,
+            "apiName": "SVMXC__Serial_Lot_Number__c",
+            "allowNew": false
+          },
+          {
+            "type": "PICKLIST",
+            "sequence": 5,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 5,
+            "apiName": "Manufacturer__c",
+            "allowNew": false
+          }
+        ],
+        "childAPIName": "SVMXC__Installed_Product__c",
+        "allowZeroLines": "Allow",
+        "allowNew": true,
+        "allowDelete": true,
+        "allowClone": true
+      }
+    ],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": true,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/Summer12/en_us/svmx_redirector.htm?uid=",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "Update Installed Product Configuration",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "UIPC_0003",
+  "description": "Update Installed Product Configuration",
+  "childProcessNodes": [
+    {
+      "type": "SOURCECHILD",
+      "sequence": 1,
+      "referenceId": "a0Gf6000000EupVEAS",
+      "objectAPIName": "SVMXC__Installed_Product__c",
+      "nodeAPIName": "SVMXC__Installed_Product__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "type": "SOURCECHILD",
+      "sequence": 2,
+      "referenceId": "a0Gf6000000EupWEAS",
+      "objectAPIName": "SVMXC__Installed_Product__c",
+      "nodeAPIName": "SVMXC__Installed_Product__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "type": "SOURCECHILD",
+      "sequence": 3,
+      "referenceId": "a0Gf6000000EupXEAS",
+      "objectAPIName": "SVMXC__Installed_Product__c",
+      "nodeAPIName": "SVMXC__Installed_Product__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "valueMappingName": "SVMXSTD: New Installed Product",
+      "valueMappingDeveloperName": "MAP043V",
+      "type": "TARGETCHILD",
+      "sourceAPIName": "SVMXC__Installed_Product__c",
+      "sequence": 1,
+      "referenceId": "a0Gf6000000EupZEAS",
+      "parentColumnAPIName": "SVMXC__Top_Level__c",
+      "objectLabel": "Assemblies",
+      "objectAPIName": "SVMXC__Installed_Product__c",
+      "nodeAPIName": "SVMXC__Installed_Product__c",
+      "mappingId": "MAP001demo",
+      "fieldMappingName": "Installed Product To Installed Product",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "valueMappingName": "SVMXSTD: New Installed Product",
+      "valueMappingDeveloperName": "MAP043V",
+      "type": "TARGETCHILD",
+      "sourceAPIName": "SVMXC__Installed_Product__c",
+      "sequence": 2,
+      "referenceId": "a0Gf6000000EupaEAC",
+      "parentColumnAPIName": "SVMXC__Top_Level__c",
+      "objectLabel": "Sub-Assemblies",
+      "objectAPIName": "SVMXC__Installed_Product__c",
+      "nodeAPIName": "SVMXC__Installed_Product__c",
+      "mappingId": "MAP001demo",
+      "fieldMappingName": "Installed Product To Installed Product",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "valueMappingName": "SVMXSTD: New Installed Product",
+      "valueMappingDeveloperName": "MAP043V",
+      "type": "TARGETCHILD",
+      "sourceAPIName": "SVMXC__Installed_Product__c",
+      "sequence": 3,
+      "referenceId": "a0Gf6000000EupbEAC",
+      "parentColumnAPIName": "SVMXC__Top_Level__c",
+      "objectLabel": "Components",
+      "objectAPIName": "SVMXC__Installed_Product__c",
+      "nodeAPIName": "SVMXC__Installed_Product__c",
+      "mappingId": "MAP001demo",
+      "fieldMappingName": "Installed Product To Installed Product",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "attachmentEnabled": false
+}

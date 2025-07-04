@@ -1,0 +1,209 @@
+{
+  "validationRules": [],
+  "transactionType": "VIEW RECORD",
+  "tagKeys": "DEMO_-_VIEW_CYCLE_COUNT;CYCLE_COUNT_LINE;CYCLE_COUNT;",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "TARGET",
+      "referenceId": "a0Gf6000000EuyhEAC",
+      "objectLabel": "Cycle Count",
+      "objectAPIName": "Cycle_Count__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qeAAAQ",
+          "name": "Cycle Count",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "STRING",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Name",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "Status__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "referenceToNameField": "SVMXC__Service_Group_Members__c.Name",
+              "referenceTo": "SVMXC__Service_Group_Members__c",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Technician__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 4,
+              "row": 2,
+              "required": false,
+              "referenceToNameField": "SVMXC__Site__c.Name",
+              "referenceTo": "SVMXC__Site__c",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "Location__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Detail",
+          "sequence": 1,
+          "referenceId": "a0df6000000D5rsAAC",
+          "objectAlias": "Cycle Count Line",
+          "name": "Cycle Count Line",
+          "columns": 1,
+          "childAPIName": "Cycle_Count_Line__c",
+          "allowZeroLines": "Allow"
+        }
+      ],
+      "objectAPIName": "Cycle_Count__c"
+    },
+    "objectAPIName": "Cycle_Count__c",
+    "name": "DEMO - View Cycle Count",
+    "lines": [
+      {
+        "sequence": 1,
+        "referenceId": "a0df6000000D5rsAAC",
+        "objectAlias": "Cycle Count Line",
+        "name": "Cycle Count Line",
+        "hideEmptySection": false,
+        "events": [],
+        "elements": [
+          {
+            "type": "REFERENCE",
+            "sequence": 1,
+            "row": 0,
+            "required": false,
+            "referenceToNameField": "Product2.Name",
+            "referenceTo": "Product2",
+            "referenceNameField": "Name",
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {},
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 1,
+            "apiName": "Part__c",
+            "allowNew": false
+          },
+          {
+            "type": "DOUBLE",
+            "sequence": 2,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 2,
+            "apiName": "Counted_Qty__c",
+            "allowNew": false
+          }
+        ],
+        "columns": 1,
+        "childAPIName": "Cycle_Count_Line__c",
+        "allowZeroLines": "Allow",
+        "allowNew": false,
+        "allowDelete": false,
+        "allowClone": false
+      }
+    ],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": true,
+    "hideQuickSave": true,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/182/en_us/svmx_redirector.htm?uid=SFM|HowToUseSFMDelivery",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "DEMO - View Cycle Count",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "View_Cycle_Count",
+  "childProcessNodes": [
+    {
+      "type": "TARGETCHILD",
+      "sequence": 1,
+      "referenceId": "a0Gf6000000EuyiEAC",
+      "parentColumnAPIName": "Cycle_Count__c",
+      "objectLabel": "Cycle Count Line",
+      "objectAPIName": "Cycle_Count_Line__c",
+      "nodeAPIName": "Cycle_Count__c",
+      "enableOnlineSearch": true,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "attachmentEnabled": false
+}

@@ -1,0 +1,321 @@
+{
+  "validationRules": [],
+  "transactionType": "SOURCE TO TARGET ALL",
+  "tagKeys": "DEMO_-_CREATE_PM_PLAN_FROM_SERVICE_CONTRACT;PREVENTIVE_MAINTENANCE_PLAN;SELECT_A_PM_TEMPLATE_TO_GENERATE_PM_PLAN;PM_PLAN_DETAILS;",
+  "syncMobileOption": "Default",
+  "subProcessSrcField": "SVMXC__PM_Plan_Template__c",
+  "subProcessName": "Create Preventive Maintenance Plan From PM Template",
+  "subProcessDeveloperName": "CR_PM_FromTemplate",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "SOURCE",
+      "referenceId": "a0Gf6000000EuUhEAK",
+      "objectAPIName": "SVMXC__Service_Contract__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "type": "TARGET",
+      "sourceAPIName": "SVMXC__Service_Contract__c",
+      "referenceId": "a0Gf6000000EuUiEAK",
+      "objectLabel": "Preventive Maintenance Plan",
+      "objectAPIName": "SVMXC__PM_Plan__c",
+      "mappingId": "MAP1732573868053c508a44168b12d435cac99caa0b4bf64",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qsxAAA",
+          "name": "PM Plan Details",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "STRING",
+              "sequence": 1,
+              "row": 1,
+              "required": true,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Name",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 2,
+              "row": 1,
+              "required": true,
+              "referenceToNameField": "SVMXC__PM_Plan_Template__c.Name",
+              "referenceTo": "SVMXC__PM_Plan_Template__c",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupMatchingField": "Name",
+              "lookupConfiguration": {
+                "name": "SVMXSTD: PM Plan Template Lookup",
+                "isStandard": true,
+                "description": "SVMXSTD: PM Plan Template Lookup",
+                "lookupObject": "SVMXC__PM_Plan_Template__c",
+                "lookupFilter": {
+                  "sourceObject": "SVMXC__PM_Plan_Template__c",
+                  "expressionsList": [
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "Complete",
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 1,
+                      "operator": "eq",
+                      "operand": "Complete",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__Coverage_Type__c",
+                      "sequence": 2,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": false
+                },
+                "lkpRecords": 10,
+                "isDefault": true,
+                "defaultColumn": "Name",
+                "advancedFilters": []
+              },
+              "lookupConfigName": "SVMXSTD: PM Plan Template Lookup",
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__PM_Plan_Template__c",
+              "allowNew": false
+            },
+            {
+              "type": "DATE",
+              "sequence": 3,
+              "row": 2,
+              "required": true,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Start_Date__c",
+              "allowNew": false
+            },
+            {
+              "type": "DATE",
+              "sequence": 4,
+              "row": 2,
+              "required": true,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__End_Date__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 5,
+              "row": 3,
+              "required": true,
+              "referenceToNameField": "SVMXC__Service_Contract__c.Name",
+              "referenceTo": "SVMXC__Service_Contract__c",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Service_Contract__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 6,
+              "row": 3,
+              "required": false,
+              "referenceToNameField": "SVMXC__Service_Level__c.Name",
+              "referenceTo": "SVMXC__Service_Level__c",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupMatchingField": "Name",
+              "lookupConfiguration": {
+                "name": "SVMXSTD: SLA Term Lookup",
+                "isStandard": true,
+                "description": "SVMXSTD: SLA Term Lookup",
+                "lookupObject": "SVMXC__Service_Level__c",
+                "lookupFilter": {
+                  "sourceObject": "SVMXC__Service_Level__c",
+                  "expressionsList": [
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "True",
+                      "sourceField": "SVMXC__Active__c",
+                      "sequence": 1,
+                      "parameterType": "Value",
+                      "operator": "eq",
+                      "operand": "True",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "SVMXC__Description__c",
+                      "sequence": 2,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": false
+                },
+                "lkpRecords": 10,
+                "isDefault": true,
+                "defaultColumn": "Name",
+                "advancedFilters": []
+              },
+              "lookupConfigName": "SVMXSTD: SLA Term Lookup",
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__SLA_Terms__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 7,
+              "row": 4,
+              "required": true,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Coverage_Type__c",
+              "allowNew": false
+            },
+            {
+              "type": "TEXTAREA",
+              "sequence": 8,
+              "row": 4,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Description__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        }
+      ],
+      "objectAPIName": "SVMXC__PM_Plan__c"
+    },
+    "objectAPIName": "SVMXC__PM_Plan__c",
+    "name": "DEMO - Create PM Plan from Service Contract",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": true,
+    "helpUrl": "https://help.servicemax.com/articles/servicemax-20-2-consolidated-help/how-to-use-sfm-delivery",
+    "events": [
+      {
+        "type": "After Save/Insert",
+        "actionType": "WEBSERVICE",
+        "actionTarget": "SVMXC__PREV_SFMEventUtils.INTF_CalculatePMPlanDetails_SCON_WS2"
+      }
+    ],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "DEMO - Create PM Plan from Service Contract",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "SFM17325738000476104715dd92ba791f01824bf8ffc8c76",
+  "childProcessNodes": [],
+  "attachmentEnabled": false
+}

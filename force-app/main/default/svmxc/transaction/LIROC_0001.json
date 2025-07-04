@@ -1,0 +1,164 @@
+{
+  "validationRules": [],
+  "transactionType": "STANDALONE EDIT",
+  "tagKeys": "LOG_INITIAL_RESPONSE_ON_CASE;LIROC_0001_DESC;CASE_INFORMATION;INITIAL_RESPONSE_LOG;CALL_NOTES;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "valueMappingName": "LIROC-0004",
+      "valueMappingDeveloperName": "LIROC-0004",
+      "type": "TARGET",
+      "referenceId": "a0Gf6000000EugvEAC",
+      "objectLabel": "Case",
+      "objectAPIName": "Case",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003q3HAAQ",
+          "name": "Case Information",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "REFERENCE",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "referenceTo": "Account",
+              "referenceNameField": "Name",
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "AccountId",
+              "allowNew": false
+            },
+            {
+              "type": "STRING",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "CaseNumber",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Section",
+          "sequence": 2,
+          "referenceId": "a0cf60000003q3IAAQ",
+          "name": "Initial Response Log",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "MULTIPICKLIST",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Initial_Failure_Codes__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "Status",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Section",
+          "sequence": 3,
+          "referenceId": "a0cf60000003q3JAAQ",
+          "name": "Call Notes",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "TEXTAREA",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Description",
+              "allowNew": false
+            }
+          ],
+          "columns": 1
+        }
+      ],
+      "objectAPIName": "Case"
+    },
+    "objectAPIName": "Case",
+    "name": "LIROC-0002",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": false,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/Spring12/en_us/svmx_redirector.htm?uid=",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "Log Initial Response on Case",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "LIROC_0001",
+  "description": "Log Initial Response on Case",
+  "childProcessNodes": [],
+  "attachmentEnabled": false
+}

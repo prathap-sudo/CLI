@@ -1,0 +1,480 @@
+{
+  "validationRules": [],
+  "transactionType": "SOURCE TO TARGET ALL",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "SOURCE",
+      "referenceId": "a0Gf6000000EuznEAC",
+      "objectAPIName": "SVMXC__Service_Order__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "type": "TARGET",
+      "sourceAPIName": "SVMXC__Service_Order__c",
+      "referenceId": "a0Gf6000000EuzqEAC",
+      "objectLabel": "Parts Request",
+      "objectAPIName": "SVMXC__Parts_Request__c",
+      "mappingId": "WO_to_PR",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": false,
+    "showAccountHistory": false,
+    "pageHelp": "This SFM transaction is used to create or edit lines in an existing Parts Request.",
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Button",
+          "showinWeb": true,
+          "showinIpad": true,
+          "referenceId": "a0cf60000003qilAAA",
+          "name": "Get Price",
+          "hideSectionTitle": false,
+          "events": [
+            {
+              "type": "Button Click",
+              "actionType": "WEBSERVICE",
+              "actionTarget": "SVMXC__INTF_WebServicesDef.INTF_PREQ_GetPrice_WS"
+            }
+          ]
+        },
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qikAAA",
+          "name": "Information",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "PICKLIST",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Status__c",
+              "allowNew": false
+            },
+            {
+              "type": "TEXTAREA",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Additional_Information__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "referenceTo": "SVMXC__Site__c",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {
+                "name": "DEMO - Stocking Location Lookup Filter",
+                "isStandard": false,
+                "description": "Stocking Location = True",
+                "lookupObject": "SVMXC__Site__c",
+                "lookupFilter": {
+                  "sourceObject": "SVMXC__Site__c",
+                  "expressionsList": [
+                    {
+                      "sourceFldDtaType": "STRING",
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "STRING",
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "STRING",
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "true",
+                      "targetField": "SVMXC__Stocking_Location__c",
+                      "sourceFldDtaType": "BOOLEAN",
+                      "sourceField": "SVMXC__Stocking_Location__c",
+                      "sequence": 1,
+                      "parameterType": "Value",
+                      "operator": "eq",
+                      "operand": "true",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": false
+                },
+                "lkpRecords": 250,
+                "isDefault": false,
+                "defaultColumn": "Name",
+                "advancedFilters": []
+              },
+              "lookupConfigName": "DEMO - Stocking Location Lookup Filter",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Requested_From__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 4,
+              "row": 2,
+              "required": false,
+              "referenceTo": "SVMXC__Site__c",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {
+                "name": "DEMO - Stocking Location Lookup Filter",
+                "isStandard": false,
+                "description": "Stocking Location = True",
+                "lookupObject": "SVMXC__Site__c",
+                "lookupFilter": {
+                  "sourceObject": "SVMXC__Site__c",
+                  "expressionsList": [
+                    {
+                      "sourceFldDtaType": "STRING",
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "STRING",
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "STRING",
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "true",
+                      "targetField": "SVMXC__Stocking_Location__c",
+                      "sourceFldDtaType": "BOOLEAN",
+                      "sourceField": "SVMXC__Stocking_Location__c",
+                      "sequence": 1,
+                      "parameterType": "Value",
+                      "operator": "eq",
+                      "operand": "true",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": false
+                },
+                "lkpRecords": 250,
+                "isDefault": false,
+                "defaultColumn": "Name",
+                "advancedFilters": []
+              },
+              "lookupConfigName": "DEMO - Stocking Location Lookup Filter",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Required_At_Location__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Detail",
+          "sequence": 1,
+          "referenceId": "a0df6000000D5s0AAC",
+          "objectAlias": "Parts Request Lines",
+          "name": "Parts Request Lines",
+          "childAPIName": "SVMXC__Parts_Request_Line__c",
+          "allowZeroLines": "Allow"
+        }
+      ],
+      "objectAPIName": "SVMXC__Parts_Request__c"
+    },
+    "objectAPIName": "SVMXC__Parts_Request__c",
+    "name": "Create Parts Request from Work Order",
+    "lines": [
+      {
+        "sequence": 1,
+        "referenceId": "a0df6000000D5s0AAC",
+        "objectAlias": "Parts Request Lines",
+        "name": "Parts Request Lines",
+        "multiAddObject": "Product2",
+        "multiAddField": "SVMXC__Product__c",
+        "hideEmptySection": false,
+        "events": [],
+        "elements": [
+          {
+            "type": "DATE",
+            "sequence": 3,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 3,
+            "apiName": "SVMXC__Date_Required__c",
+            "allowNew": false
+          },
+          {
+            "type": "REFERENCE",
+            "sequence": 1,
+            "row": 0,
+            "required": true,
+            "referenceTo": "Product2",
+            "referenceNameField": "Name",
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {
+              "name": "SVMXSTD: Product Lookup",
+              "isStandard": true,
+              "description": "Pre-configured standard lookup for Product object",
+              "lookupObject": "Product2",
+              "lookupFilter": {
+                "sourceObject": "Product2",
+                "expressionsList": [
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  }
+                ],
+                "defaultOn": false,
+                "allowOverride": false
+              },
+              "lkpRecords": 10,
+              "isDefault": true,
+              "defaultColumn": "Name",
+              "advancedFilters": [
+                {
+                  "name": "SVMXSTD:Limit Items to My Trunk Stock",
+                  "description": "Limit Items to My Trunk Stock",
+                  "targetNode": "SVMXC__Product__c",
+                  "sourceObject": "SVMXC__Product_Stock__c",
+                  "expressionsList": [
+                    {
+                      "value": "Available",
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 1,
+                      "parameterType": "Value",
+                      "operator": "eq",
+                      "operand": "Available",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "0",
+                      "sourceField": "SVMXC__Available_Qty__c",
+                      "sequence": 2,
+                      "parameterType": "Value",
+                      "operator": "gt",
+                      "operand": "0",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "User Trunk",
+                      "sourceField": "SVMXC__Location__c",
+                      "sequence": 3,
+                      "parameterType": "Constant",
+                      "operator": "eq",
+                      "operand": "User Trunk",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": true
+                }
+              ]
+            },
+            "lookupConfigName": "SVMXSTD: Product Lookup",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 1,
+            "apiName": "SVMXC__Product__c",
+            "allowNew": false
+          },
+          {
+            "type": "DOUBLE",
+            "sequence": 2,
+            "row": 0,
+            "required": true,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 2,
+            "apiName": "SVMXC__Quantity_Required2__c",
+            "allowNew": false
+          },
+          {
+            "type": "CURRENCY",
+            "sequence": 4,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 4,
+            "apiName": "SVMXC__Unit_Price2__c",
+            "allowNew": false
+          }
+        ],
+        "childAPIName": "SVMXC__Parts_Request_Line__c",
+        "allowZeroLines": "Allow",
+        "allowNew": true,
+        "allowDelete": true,
+        "allowClone": true
+      }
+    ],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": true,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/Winter18/en_us/svmx_redirector.htm?uid=APP22_04",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "Create Parts Request from Work Order",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "Create_Parts_Request_from_Work_Order",
+  "childProcessNodes": [
+    {
+      "valueMappingName": "New Parts Request Lines",
+      "valueMappingDeveloperName": "New_Parts_Request_Lines",
+      "type": "TARGETCHILD",
+      "sourceAPIName": "SVMXC__Service_Order_Line__c",
+      "sequence": 1,
+      "referenceId": "a0Gf6000000EuzoEAC",
+      "qualificationCriteriaId": "EXPR006custom",
+      "parentColumnAPIName": "SVMXC__Parts_Request__c",
+      "objectLabel": "Parts Request Line",
+      "objectAPIName": "SVMXC__Parts_Request_Line__c",
+      "nodeAPIName": "SVMXC__Parts_Request__c",
+      "mappingId": "WDL_to_PRL",
+      "fieldMappingName": "WDL to PRL",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "type": "SOURCECHILD",
+      "sequence": 1,
+      "referenceId": "a0Gf6000000EuzpEAC",
+      "parentColumnAPIName": "SVMXC__Service_Order__c",
+      "objectAPIName": "SVMXC__Service_Order_Line__c",
+      "nodeAPIName": "SVMXC__Service_Order__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "attachmentEnabled": false
+}

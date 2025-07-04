@@ -1,0 +1,353 @@
+{
+  "validationRules": [],
+  "transactionType": "STANDALONE CREATE",
+  "tagKeys": "CREATE_SERVICE_REQUEST;CREATE_SERVICE_REQUEST_DESC;**CUSTOMER_ACTION_REQUIRED:_REQUEST_DETAIL**;**ADDITIONAL_DETAILS**;**ASSET_DETAILS**;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "valueMappingName": "New Service Request Map",
+      "valueMappingDeveloperName": "New_Service_Request_Map",
+      "type": "TARGET",
+      "referenceId": "a0Gf6000000EuzWEAS",
+      "objectLabel": "Service Request",
+      "objectAPIName": "SVMXC__Service_Request__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qiIAAQ",
+          "name": "**Customer Action Required: Request Detail**",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "PICKLIST",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Is_this_an_equipment_related_request__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "Equipment_Location__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Symptom__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 4,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "Equipment_Status__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 5,
+              "row": 3,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Common_Occurence__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 6,
+              "row": 3,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "Recent_Events__c",
+              "allowNew": false
+            },
+            {
+              "type": "BOOLEAN",
+              "sequence": 7,
+              "row": 4,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Remote_Troubleshooting_Request__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Section",
+          "sequence": 2,
+          "referenceId": "a0cf60000003qiGAAQ",
+          "name": "**Additional Details**",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "STRING",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Subject__c",
+              "allowNew": false
+            },
+            {
+              "type": "TEXTAREA",
+              "sequence": 2,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Problem_Description__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 1
+        },
+        {
+          "type": "Section",
+          "sequence": 3,
+          "referenceId": "a0cf60000003qiJAAQ",
+          "name": "**Asset Details**",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "REFERENCE",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "referenceTo": "SVMXC__Installed_Product__c",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {
+                "name": "New SR IP Lookup",
+                "isStandard": false,
+                "lookupObject": "SVMXC__Installed_Product__c",
+                "lookupFilter": {
+                  "sourceObject": "SVMXC__Installed_Product__c",
+                  "expressionsList": [
+                    {
+                      "sourceFldDtaType": "STRING",
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Company__c",
+                      "sequence": 1,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "Good Samaritan Hospital",
+                      "targetField": "Account_Name__c",
+                      "sourceFldDtaType": "STRING",
+                      "sourceField": "Account_Name__c",
+                      "sequence": 1,
+                      "parameterType": "Value",
+                      "operator": "eq",
+                      "operand": "Good Samaritan Hospital",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Product__c",
+                      "sequence": 2,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "Princess Margaret Hospital",
+                      "targetField": "Account_Name__c",
+                      "sourceFldDtaType": "STRING",
+                      "sourceField": "Account_Name__c",
+                      "sequence": 2,
+                      "parameterType": "Value",
+                      "operator": "eq",
+                      "operand": "Princess Margaret Hospital",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "STRING",
+                      "sourceField": "Name",
+                      "sequence": 2,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Product__c",
+                      "sequence": 3,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "SVMXC__Company__c",
+                      "sequence": 3,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "DATE",
+                      "sourceField": "SVMXC__Date_Installed__c",
+                      "sequence": 4,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "STRING",
+                      "sourceField": "SVMXC__Serial_Lot_Number__c",
+                      "sequence": 4,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": false,
+                  "advanceExpression": "1 OR 2"
+                },
+                "lkpRecords": 50,
+                "isDefault": false,
+                "defaultColumn": "Name",
+                "advancedFilters": []
+              },
+              "lookupConfigName": "New SR IP Lookup",
+              "isRichTextOnWeb": false,
+              "formFillMappingName": "IP to SR Form Fill Map",
+              "formFillMappingDeveloperName": "IP_to_SR_Form_Fill_Map",
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Serial_Number__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "referenceTo": "Product2",
+              "referenceNameField": "Name",
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Product__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        }
+      ],
+      "objectAPIName": "SVMXC__Service_Request__c"
+    },
+    "objectAPIName": "SVMXC__Service_Request__c",
+    "name": "New Service Request Layout",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": true,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/182/en_us/svmx_redirector.htm?uid=SFM|HowToUseSFMDelivery",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "Create Service Request",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "Create_Service_Request",
+  "description": "SFM transaction that creates a new Service Request record from the Customer Community",
+  "childProcessNodes": [],
+  "attachmentEnabled": false
+}

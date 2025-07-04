@@ -1,0 +1,173 @@
+{
+  "validationRules": [
+    {
+      "sequence": 0,
+      "referenceId": "a0Gf6000000EutHEAS",
+      "name": "SVMXSTD: EVT_BizRule002",
+      "message": "Start Date/Time must be before End Date/Time.",
+      "developerName": "EXPR_BizRule002"
+    }
+  ],
+  "transactionType": "SOURCE TO TARGET ALL",
+  "tagKeys": "TECH_OUT_OF_OFFICE;EVENT;DETAIL;START_DATE/TIME_MUST_BE_BEFORE_END_DATE/TIME.;THIS_RECORD_DOES_NOT_MEET_THE_QUALIFICATION_CRITERIA_FOR_THIS_SFM_TRANSACTION;EVENT_DETAILS;EVENT_DESCRIPTION;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "SOURCE",
+      "referenceId": "a0Gf6000000EutGEAS",
+      "objectAPIName": "SVMXC__Service_Group_Members__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "type": "TARGET",
+      "sourceAPIName": "SVMXC__Service_Group_Members__c",
+      "referenceId": "a0Gf6000000EutHEAS",
+      "objectLabel": "Out of Office",
+      "objectAPIName": "Event",
+      "mappingId": "Tech_Out_of_Office",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qXNAAY",
+          "name": "Event Details",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "DATETIME",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "StartDateTime",
+              "allowNew": false
+            },
+            {
+              "type": "DATETIME",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "EndDateTime",
+              "allowNew": false
+            },
+            {
+              "type": "BOOLEAN",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "IsAllDayEvent",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Section",
+          "sequence": 2,
+          "referenceId": "a0cf60000003qXOAAY",
+          "name": "Event Description",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "STRING",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Subject",
+              "allowNew": false
+            },
+            {
+              "type": "TEXTAREA",
+              "sequence": 2,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupContextSource": "CURRENT_RECORD",
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Description",
+              "allowNew": false
+            }
+          ],
+          "columns": 1
+        }
+      ],
+      "objectAPIName": "Event"
+    },
+    "objectAPIName": "Event",
+    "name": "DEMO - Tech OOO",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": true,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/Winter17/en_us/svmx_redirector.htm?uid=SFM|HowToUseSFMDelivery",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "Tech Out of Office",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "Tech_Out_of_Office",
+  "childProcessNodes": [],
+  "attachmentEnabled": false
+}

@@ -1,0 +1,136 @@
+{
+  "validationRules": [],
+  "transactionType": "VIEW RECORD",
+  "tagKeys": "THINGWORX_-_VIEW_INVESTIGATION;INVESTIGATION_OBSERVATIONS;NEW_SECTION;",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "TARGET",
+      "referenceId": "a0Gf6000000EtyvEAC",
+      "objectLabel": "Investigation",
+      "objectAPIName": "SVMXC__SM_Investigation__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qxUAAQ",
+          "name": "New Section",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "STRING",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupContextSource": "CURRENT_RECORD",
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Name",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Detail",
+          "sequence": 1,
+          "referenceId": "a0df6000000D5j2AAC",
+          "objectAlias": "Investigation Observations",
+          "name": "Investigation Observations",
+          "columns": 1,
+          "childAPIName": "SVMXC__SM_Investigation_Observation__c",
+          "allowZeroLines": "Allow"
+        }
+      ],
+      "objectAPIName": "SVMXC__SM_Investigation__c"
+    },
+    "objectAPIName": "SVMXC__SM_Investigation__c",
+    "name": "ThingWorx - View Investigation",
+    "lines": [
+      {
+        "sequence": 1,
+        "referenceId": "a0df6000000D5j2AAC",
+        "objectAlias": "Investigation Observations",
+        "name": "Investigation Observations",
+        "hideEmptySection": false,
+        "events": [],
+        "elements": [
+          {
+            "type": "STRING",
+            "sequence": 1,
+            "row": 1,
+            "required": false,
+            "readOnly": true,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {},
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 1,
+            "apiName": "Name",
+            "allowNew": false
+          }
+        ],
+        "columns": 1,
+        "childAPIName": "SVMXC__SM_Investigation_Observation__c",
+        "allowZeroLines": "Allow",
+        "allowNew": false,
+        "allowDelete": false,
+        "allowClone": true
+      }
+    ],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": true,
+    "hideQuickSave": true,
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "ThingWorx - View Investigation",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "SFM17085258811655de7e3cd5bc2abec8e188b35c1283e8b",
+  "childProcessNodes": [
+    {
+      "type": "TARGETCHILD",
+      "sequence": 1,
+      "referenceId": "a0Gf6000000EtyxEAC",
+      "parentColumnAPIName": "SVMXC__SM_Investigation__c",
+      "objectLabel": "Investigation Observations",
+      "objectAPIName": "SVMXC__SM_Investigation_Observation__c",
+      "nodeAPIName": "SVMXC__SM_Investigation__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "attachmentEnabled": false
+}

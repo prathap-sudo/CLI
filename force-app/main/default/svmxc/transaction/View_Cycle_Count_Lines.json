@@ -1,0 +1,117 @@
+{
+  "validationRules": [],
+  "transactionType": "VIEW RECORD",
+  "tagKeys": "DEMO_-_VIEW_CYCLE_COUNT_LINES;CYCLE_COUNT_LINE;",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "TARGET",
+      "referenceId": "a0Gf6000000EuylEAC",
+      "objectLabel": "Cycle Count Line",
+      "objectAPIName": "Cycle_Count_Line__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qeKAAQ",
+          "name": "Cycle Count Line",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "REFERENCE",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "referenceToNameField": "Product2.Name",
+              "referenceTo": "Product2",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Part__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "referenceToNameField": "SVMXC__Product_Stock__c.Name",
+              "referenceTo": "SVMXC__Product_Stock__c",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "Product_Stock__c",
+              "allowNew": false
+            },
+            {
+              "type": "DOUBLE",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Counted_Qty__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        }
+      ],
+      "objectAPIName": "Cycle_Count_Line__c"
+    },
+    "objectAPIName": "Cycle_Count_Line__c",
+    "name": "DEMO - View Cycle Count Lines",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": true,
+    "hideQuickSave": true,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/182/en_us/svmx_redirector.htm?uid=SFM|HowToUseSFMDelivery",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "DEMO - View Cycle Count Lines",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "View_Cycle_Count_Lines",
+  "childProcessNodes": [],
+  "attachmentEnabled": false
+}

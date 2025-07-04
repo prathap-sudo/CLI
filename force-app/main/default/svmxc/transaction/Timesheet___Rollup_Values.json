@@ -1,0 +1,128 @@
+{
+  "validationRules": [],
+  "transactionType": "STANDALONE EDIT",
+  "tagKeys": "TIMESHEET_-_ROLLUP_VALUES;TIMESHEET;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "valueMappingName": "Timesheet Rollup Values",
+      "valueMappingDeveloperName": "Timesheet_Rollup_Values",
+      "type": "TARGET",
+      "referenceId": "a0Gf6000000EuruEAC",
+      "objectLabel": "Timesheet",
+      "objectAPIName": "SVMXC__Timesheet__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qUjAAI",
+          "name": "Timesheet",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "BOOLEAN",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Rollup_Timesheet_Values__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "referenceTo": "User",
+              "referenceNameField": "Name",
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__User__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Status__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 4,
+              "row": 2,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Period__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        }
+      ],
+      "objectAPIName": "SVMXC__Timesheet__c"
+    },
+    "objectAPIName": "SVMXC__Timesheet__c",
+    "name": "TimesheetRollup",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": false,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/Summer16/en_us/svmx_redirector.htm?uid=SFM|HowToUseSFMDelivery",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "Timesheet - Rollup Values",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "Timesheet___Rollup_Values",
+  "childProcessNodes": [],
+  "attachmentEnabled": false
+}

@@ -1,0 +1,97 @@
+{
+  "validationRules": [],
+  "transactionType": "STANDALONE EDIT",
+  "tagKeys": "LOG_TRAVEL_START_-_MOBILE;WORK_ORDER;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "valueMappingName": "Start Travel - Mobile",
+      "valueMappingDeveloperName": "Start_Travel_-_Mobile",
+      "type": "TARGET",
+      "referenceId": "a0Gf6000000EutCEAS",
+      "qualificationCriteriaId": "NCWO_EXPR072",
+      "objectLabel": "Work Order",
+      "objectAPIName": "SVMXC__Service_Order__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": true
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qXEAAY",
+          "name": "Work Order",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "DATETIME",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Travel_Start_Actual__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "readOnly": true,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Dispatch_Response__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        }
+      ],
+      "objectAPIName": "SVMXC__Service_Order__c"
+    },
+    "objectAPIName": "SVMXC__Service_Order__c",
+    "name": "Log Travel Start Mobile",
+    "lines": [],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": false,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/Winter17/en_us/svmx_redirector.htm?uid=SFM|HowToUseSFMDelivery",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "Log Travel Start - Mobile",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "Log_Travel_Start___Mobile",
+  "childProcessNodes": [],
+  "attachmentEnabled": true
+}

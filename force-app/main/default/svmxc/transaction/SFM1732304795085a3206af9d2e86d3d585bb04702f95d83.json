@@ -1,0 +1,209 @@
+{
+  "validationRules": [],
+  "transactionType": "STANDALONE EDIT",
+  "tagKeys": "DEMO_-_MANAGE_ACTIVITY;ACTIVITY_PRODUCT;ACTIVITY_DETAILS;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "TARGET",
+      "referenceId": "a0Gf6000000Eu1jEAC",
+      "objectLabel": "Activity Master",
+      "objectAPIName": "SVMXC__Activity_Master__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": true,
+    "showAccountHistory": false,
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qqBAAQ",
+          "name": "Activity Details",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "PICKLIST",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupContextSource": "CURRENT_RECORD",
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Activity_Type__c",
+              "allowNew": false
+            },
+            {
+              "type": "CURRENCY",
+              "sequence": 2,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupContextSource": "CURRENT_RECORD",
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Cost_per_hour__c",
+              "allowNew": false
+            },
+            {
+              "type": "TEXTAREA",
+              "sequence": 3,
+              "row": 3,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupContextSource": "CURRENT_RECORD",
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Description__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 1
+        },
+        {
+          "type": "Detail",
+          "sequence": 1,
+          "referenceId": "a0df6000000D5jaAAC",
+          "objectAlias": "Activity Product",
+          "name": "Activity Product",
+          "columns": 1,
+          "childAPIName": "SVMXC__Activity_Product__c",
+          "allowZeroLines": "Allow"
+        }
+      ],
+      "objectAPIName": "SVMXC__Activity_Master__c"
+    },
+    "objectAPIName": "SVMXC__Activity_Master__c",
+    "name": "DEMO - Manage Activity",
+    "lines": [
+      {
+        "sourceControllerReferenceField": "SVMXC__Activity__c",
+        "sequence": 1,
+        "referenceId": "a0df6000000D5jaAAC",
+        "objectAlias": "Activity Product",
+        "name": "Activity Product",
+        "hideEmptySection": false,
+        "events": [],
+        "elements": [
+          {
+            "type": "REFERENCE",
+            "sequence": 1,
+            "row": 1,
+            "required": false,
+            "referenceToNameField": "Product2.Name",
+            "referenceTo": "Product2",
+            "referenceNameField": "Name",
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {},
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 1,
+            "apiName": "SVMXC__Product__c",
+            "allowNew": false
+          },
+          {
+            "type": "PICKLIST",
+            "sequence": 2,
+            "row": 2,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {},
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 1,
+            "apiName": "SVMXC__Product_Family__c",
+            "allowNew": false
+          },
+          {
+            "type": "PICKLIST",
+            "sequence": 3,
+            "row": 3,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {},
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 1,
+            "apiName": "SVMXC__Product_Line__c",
+            "allowNew": false
+          }
+        ],
+        "columns": 1,
+        "childAPIName": "SVMXC__Activity_Product__c",
+        "allowZeroLines": "Allow",
+        "allowNew": true,
+        "allowDelete": true,
+        "allowClone": true
+      }
+    ],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": false,
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "DEMO - Manage Activity",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "SFM1732304795085a3206af9d2e86d3d585bb04702f95d83",
+  "childProcessNodes": [
+    {
+      "type": "TARGETCHILD",
+      "sequence": 1,
+      "referenceId": "a0Gf6000000Eu1kEAC",
+      "parentColumnAPIName": "SVMXC__Activity__c",
+      "objectLabel": "Activity Product",
+      "objectAPIName": "SVMXC__Activity_Product__c",
+      "nodeAPIName": "SVMXC__Activity_Master__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "attachmentEnabled": false
+}

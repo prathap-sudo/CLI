@@ -1,0 +1,658 @@
+{
+  "validationRules": [],
+  "transactionType": "SOURCE TO TARGET ALL",
+  "tagKeys": "DEMO_-_CREATE_DEPOT_REPAIR_WORK_ORDER_FROM_RMA;PAG024-CUSTOM_PAGEHELP;WORK_DETAILS;WORK_ORDER;PRODUCT_INFORMATION;PROBLEM_SUMMARY;",
+  "syncMobileOption": "Default",
+  "status": "Complete",
+  "sorting": [],
+  "parentProcessNodes": [
+    {
+      "type": "SOURCE",
+      "referenceId": "a0Gf6000000EuzREAS",
+      "objectAPIName": "SVMXC__RMA_Shipment_Order__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "type": "TARGET",
+      "sourceAPIName": "SVMXC__RMA_Shipment_Order__c",
+      "referenceId": "a0Gf6000000EuzUEAS",
+      "objectLabel": "Work Order",
+      "objectAPIName": "SVMXC__Service_Order__c",
+      "mappingId": "MAP047_Depot_Demo",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "pageLayoutDetails": {
+    "type": "Header",
+    "showProductHistory": false,
+    "showAllSections": false,
+    "showAccountHistory": false,
+    "pageHelp": "This screen is used for creating a Depot Repair Work Order. Fill all fields marked as Required, and also enter details of the product to be repaired.",
+    "pageHeader": {
+      "sections": [
+        {
+          "type": "Section",
+          "sequence": 1,
+          "referenceId": "a0cf60000003qhlAAA",
+          "name": "Work Order",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "REFERENCE",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "referenceToNameField": "Account.Name",
+              "referenceTo": "Account",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupMatchingField": "Name",
+              "lookupConfiguration": {
+                "name": "SVMXSTD: Account Lookup",
+                "isStandard": true,
+                "description": "Pre-configured standard lookup for Account object",
+                "lookupObject": "Account",
+                "lookupFilter": {
+                  "sourceObject": "Account",
+                  "expressionsList": [
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Phone",
+                      "sequence": 2,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Phone",
+                      "sequence": 2,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "AccountNumber",
+                      "sequence": 2,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Phone",
+                      "sequence": 3,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": false
+                },
+                "lkpRecords": 10,
+                "isDefault": true,
+                "defaultColumn": "Name",
+                "advancedFilters": []
+              },
+              "lookupConfigName": "SVMXSTD: Account Lookup",
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Company__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Order_Status__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 3,
+              "row": 2,
+              "required": false,
+              "referenceToNameField": "Contact.Name",
+              "referenceTo": "Contact",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": true,
+              "lookupMatchingField": "Name",
+              "lookupConfiguration": {
+                "name": "SVMXSTD: Contact Lookup",
+                "isStandard": true,
+                "description": "Pre-configured standard lookup for Contact object",
+                "lookupObject": "Contact",
+                "lookupFilter": {
+                  "sourceObject": "Contact",
+                  "expressionsList": [
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Name",
+                      "sequence": 1,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Phone",
+                      "sequence": 2,
+                      "contextType": "Bubble",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Phone",
+                      "sequence": 2,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceFldDtaType": "REFERENCE",
+                      "sourceField": "AccountId",
+                      "sequence": 2,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Phone",
+                      "sequence": 3,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "MobilePhone",
+                      "sequence": 3,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Email",
+                      "sequence": 4,
+                      "contextType": "Result",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "sourceField": "Email",
+                      "sequence": 4,
+                      "contextType": "Search",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": false
+                },
+                "lkpRecords": 10,
+                "isDefault": true,
+                "defaultColumn": "Name",
+                "advancedFilters": []
+              },
+              "lookupConfigName": "SVMXSTD: Contact Lookup",
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Contact__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 4,
+              "row": 2,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Priority__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 5,
+              "row": 3,
+              "required": true,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "Repair_Routing__c",
+              "allowNew": false
+            },
+            {
+              "type": "PICKLIST",
+              "sequence": 6,
+              "row": 3,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Billing_Type__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Section",
+          "sequence": 2,
+          "referenceId": "a0cf60000003qhmAAA",
+          "name": "Product Information",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "REFERENCE",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "referenceToNameField": "SVMXC__Installed_Product__c.Name",
+              "referenceTo": "SVMXC__Installed_Product__c",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Component__c",
+              "allowNew": false
+            },
+            {
+              "type": "REFERENCE",
+              "sequence": 2,
+              "row": 1,
+              "required": false,
+              "referenceToNameField": "Product2.Name",
+              "referenceTo": "Product2",
+              "referenceNameField": "Name",
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 2,
+              "apiName": "SVMXC__Product__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 2
+        },
+        {
+          "type": "Section",
+          "sequence": 3,
+          "referenceId": "a0cf60000003qhnAAA",
+          "name": "Problem Summary",
+          "hideSectionTitle": false,
+          "elements": [
+            {
+              "type": "TEXTAREA",
+              "sequence": 1,
+              "row": 1,
+              "required": false,
+              "readOnly": false,
+              "overrideLookupContext": false,
+              "lookupConfiguration": {},
+              "lkpSortDirection": "ASC",
+              "isRichTextOnWeb": false,
+              "events": [],
+              "eltType": "Field",
+              "column": 1,
+              "apiName": "SVMXC__Problem_Description__c",
+              "allowNew": false
+            }
+          ],
+          "columns": 1
+        },
+        {
+          "type": "Detail",
+          "sequence": 1,
+          "referenceId": "a0df6000000D5rwAAC",
+          "objectAlias": "Work Details",
+          "name": "Work Details",
+          "columns": 1,
+          "childAPIName": "SVMXC__Service_Order_Line__c",
+          "allowZeroLines": "Allow"
+        }
+      ],
+      "objectAPIName": "SVMXC__Service_Order__c"
+    },
+    "objectAPIName": "SVMXC__Service_Order__c",
+    "name": "DEMO - Create Depot Repair Work Order from RMA",
+    "lines": [
+      {
+        "sourceControllerReferenceField": "SVMXC__Service_Order__c",
+        "sequence": 1,
+        "referenceId": "a0df6000000D5rwAAC",
+        "objectAlias": "Work Details",
+        "name": "Work Details",
+        "hideEmptySection": false,
+        "events": [],
+        "elements": [
+          {
+            "type": "PICKLIST",
+            "sequence": 1,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 1,
+            "apiName": "SVMXC__Line_Type__c",
+            "allowNew": false
+          },
+          {
+            "type": "PICKLIST",
+            "sequence": 2,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 2,
+            "apiName": "SVMXC__Line_Status__c",
+            "allowNew": false
+          },
+          {
+            "type": "REFERENCE",
+            "sequence": 3,
+            "row": 0,
+            "required": false,
+            "referenceToNameField": "SVMXC__Installed_Product__c.Name",
+            "referenceTo": "SVMXC__Installed_Product__c",
+            "referenceNameField": "Name",
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {},
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 3,
+            "apiName": "SVMXC__Serial_Number__c",
+            "allowNew": false
+          },
+          {
+            "type": "REFERENCE",
+            "sequence": 4,
+            "row": 0,
+            "required": false,
+            "referenceToNameField": "Product2.Name",
+            "referenceTo": "Product2",
+            "referenceNameField": "Name",
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupContextSource": "CURRENT_RECORD",
+            "lookupConfiguration": {
+              "name": "SVMXSTD: Product Lookup",
+              "isStandard": true,
+              "description": "Pre-configured standard lookup for Product object",
+              "lookupObject": "Product2",
+              "lookupFilter": {
+                "sourceObject": "Product2",
+                "expressionsList": [
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Name",
+                    "sequence": 1,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "ProductCode",
+                    "sequence": 2,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Result",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Bubble",
+                    "actionType": "Set Value"
+                  },
+                  {
+                    "sourceField": "Family",
+                    "sequence": 3,
+                    "contextType": "Search",
+                    "actionType": "Set Value"
+                  }
+                ],
+                "defaultOn": false,
+                "allowOverride": false
+              },
+              "lkpRecords": 10,
+              "isDefault": true,
+              "defaultColumn": "Name",
+              "advancedFilters": [
+                {
+                  "name": "SVMXSTD:Limit Items to My Trunk Stock",
+                  "description": "Limit Items to My Trunk Stock",
+                  "targetNode": "SVMXC__Product__c",
+                  "sourceObject": "SVMXC__Product_Stock__c",
+                  "expressionsList": [
+                    {
+                      "value": "Available",
+                      "sourceField": "SVMXC__Status__c",
+                      "sequence": 1,
+                      "parameterType": "Value",
+                      "operator": "eq",
+                      "operand": "Available",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "0",
+                      "sourceField": "SVMXC__Available_Qty__c",
+                      "sequence": 2,
+                      "parameterType": "Value",
+                      "operator": "gt",
+                      "operand": "0",
+                      "actionType": "Set Value"
+                    },
+                    {
+                      "value": "User Trunk",
+                      "sourceField": "SVMXC__Location__c",
+                      "sequence": 3,
+                      "parameterType": "Constant",
+                      "operator": "eq",
+                      "operand": "User Trunk",
+                      "actionType": "Set Value"
+                    }
+                  ],
+                  "defaultOn": false,
+                  "allowOverride": true
+                }
+              ]
+            },
+            "lookupConfigName": "SVMXSTD: Product Lookup",
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 4,
+            "apiName": "SVMXC__Product__c",
+            "allowNew": false
+          },
+          {
+            "type": "DOUBLE",
+            "sequence": 5,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 5,
+            "apiName": "SVMXC__Actual_Quantity2__c",
+            "allowNew": false
+          },
+          {
+            "type": "PICKLIST",
+            "sequence": 6,
+            "row": 0,
+            "required": false,
+            "readOnly": false,
+            "overrideLookupContext": false,
+            "lookupConfiguration": {},
+            "lkpSortDirection": "ASC",
+            "isRichTextOnWeb": false,
+            "events": [],
+            "eltType": "Field",
+            "column": 6,
+            "apiName": "SVMXC__Activity_Type__c",
+            "allowNew": false
+          }
+        ],
+        "columns": 1,
+        "childAPIName": "SVMXC__Service_Order_Line__c",
+        "allowZeroLines": "Allow",
+        "allowNew": true,
+        "allowDelete": true,
+        "allowClone": true
+      }
+    ],
+    "isStandard": false,
+    "includeSummary": false,
+    "includeEventTimePlace": false,
+    "includeContact": false,
+    "hideSave": false,
+    "hideQuickSave": true,
+    "helpUrl": "http://userdocs.servicemax.com:8080/ServiceMaxHelp/Winter11/en_us/svmx_redirector.htm?uid=APP19_10",
+    "events": [],
+    "enableTroubleShooting": false,
+    "enableServiceReportView": false,
+    "enableServiceReportGeneration": false,
+    "dependencyExist": true
+  },
+  "name": "DEMO - Create Depot Repair Work Order from RMA",
+  "linkedProcesses": [],
+  "isStandard": false,
+  "formulas": [],
+  "events": [],
+  "enableRealTimeValidation": true,
+  "developerName": "Create_Depot_Repair_WorkOrder",
+  "childProcessNodes": [
+    {
+      "type": "SOURCECHILD",
+      "sequence": 1,
+      "referenceId": "a0Gf6000000EuzSEAS",
+      "parentColumnAPIName": "SVMXC__RMA_Shipment_Order__c",
+      "objectAPIName": "SVMXC__RMA_Shipment_Line__c",
+      "nodeAPIName": "SVMXC__RMA_Shipment_Order__c",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    },
+    {
+      "type": "TARGETCHILD",
+      "sourceAPIName": "SVMXC__RMA_Shipment_Line__c",
+      "sequence": 1,
+      "referenceId": "a0Gf6000000EuzTEAS",
+      "parentColumnAPIName": "SVMXC__Service_Order__c",
+      "objectLabel": "Work Details",
+      "objectAPIName": "SVMXC__Service_Order_Line__c",
+      "nodeAPIName": "SVMXC__Service_Order__c",
+      "mappingId": "MAP002_Depot_Demo",
+      "fieldMappingName": "RMA Line to Work Detail Line",
+      "enableOnlineSearch": false,
+      "allowImages": false,
+      "allowAttachments": false
+    }
+  ],
+  "attachmentEnabled": false
+}
