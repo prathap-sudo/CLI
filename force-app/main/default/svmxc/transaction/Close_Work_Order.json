@@ -36,7 +36,7 @@
               "type": "TEXTAREA",
               "sequence": 1,
               "row": 1,
-              "required": false,
+              "required": true,
               "readOnly": false,
               "overrideLookupContext": false,
               "lookupConfiguration": {},
